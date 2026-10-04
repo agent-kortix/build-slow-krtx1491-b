@@ -1,0 +1,19 @@
+kortix_version: 2
+
+project:
+  name: build-slow-krtx1491-b
+  description: A deliberately slow first image build, for verifying KRTX-1491.
+
+sandbox:
+  templates:
+    - slug: slow
+      name: Slow build
+      dockerfile: Dockerfile
+      cpu: 2
+      memory: 4
+      disk: 10
+  default: slow
+
+agents:
+  kortix:
+    file: agents/kortix.md
